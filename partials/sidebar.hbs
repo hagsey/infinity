@@ -1,0 +1,60 @@
+<div class="sidebar">
+  <div class="sidebar__item">
+    <h3 class="sidebar-title">About Eric</h3>
+    <div class="sidebar-about">
+      <div class="sidebar-about-content">
+        <p>Eric Hagemann, MSc, CSCS is a performance coach located in Ontario, Canada where he teaches athletes and every day people about getting strong, healthy, and fit for sport.</p>
+        <a href="/about" class="btn btn-small btn-alpha">
+          Learn more
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar__item">
+    <h3 class="sidebar-title">Topics</h3>
+    {{#get "tags" limit="all" include="count.posts" as |tags|}}
+    <div class="tags-list">
+    {{#foreach tags}}
+      <a href="{{url}}">{{name}} ({{count.posts}})</a>
+    {{/foreach}}
+    </div>
+  {{/get}}
+  </div>
+
+  <div class="sidebar__item sidebar-post-list">
+    <h3 class="sidebar-title">Best of</h3>
+    {{#get "posts" filter="featured:true" limit="5" as |f| }}
+      {{#foreach f}}
+        <div class="sidebar-post">
+          <div class="sidebar-post-img" style="background-image: url({{image}})">
+          </div>
+
+          <div class="sidebar-post-content">
+            <a class="post-title post-title--sm" href="{{url}}">{{title}}
+            <p class="date">{{date}}</p>
+            </a>
+          </div>
+        </div>
+      {{/foreach}}
+    {{/get}}
+  </div>
+
+  <div class="sidebar__item sidebar-post-list">
+    <h3 class="sidebar-title">Most recent</h3>
+    {{#get "posts" limit="5"}}
+      {{#foreach posts}}
+        <div class="sidebar-post">
+          <div class="sidebar-post-img" style="background-image: url({{image}})">
+          </div>
+
+          <div class="sidebar-post-content">
+            <a class="post-title post-title--sm" href="{{url}}">{{title}}
+            <p class="date">{{date}}</p>
+            </a>
+          </div>
+        </div>
+      {{/foreach}}
+    {{/get}}
+  </div>
+</div>

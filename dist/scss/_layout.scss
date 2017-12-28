@@ -1,0 +1,111 @@
+.site-header {
+  grid-area: header;
+}
+.subheader {
+  grid-area: subheader;
+}
+.loop {
+  grid-area: loop
+}
+.email-signup {
+  grid-area: email-signup;
+}
+.subheader-content {
+  grid-area: subheader-content;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.post-content {
+  grid-area: post-content;
+}
+.blog {
+  grid-area: blog;
+}
+.blog-content {
+  grid-area: blog-content;
+}
+
+.main {
+  grid-area: main;
+}
+
+.page-header {
+  grid-area: page-header;
+}
+.page-content {
+  grid-area: page-content;
+}
+.blog-content,
+.post {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-gap: 0px;
+  grid-template-areas:
+    "main"
+    "sidebar";
+}
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-gap: 0px;
+  grid-template-areas:
+    "page-header"
+    "page-content";
+}
+
+.subheader-content-wrap {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: 
+    "subheader-content"
+    "email-signup";
+}
+
+@media (min-width: $mq-md) {
+  .blog-content,
+  .post {
+    grid-gap: 45px;
+    grid-template-columns: 7fr 3fr;
+    grid-template-areas:
+      "main sidebar"
+  }
+
+  .subheader-content-wrap {
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    grid-template-areas: "subheader-content email-signup";
+  }
+}
+
+@media (min-width: $mq-lg) {
+  .blog-content,
+  .post {
+    grid-gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.section {}
+
+.section-padding {
+  padding: 4em 0;
+
+  &--xl {
+    padding: 8em 0;
+  }
+  &--lg {
+    padding: 6em 0;
+  }
+
+  &--sm {
+    padding: 2em 0;
+  }
+}

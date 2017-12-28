@@ -1,0 +1,43 @@
+
+{{!< default}}
+{{> "header"}}
+<div class="post"> 
+  {{> "sidebar"}}
+  
+  <div class="main">
+    {{#post}}
+      <h1 class="post-title post-title--lg">{{title}}</h1>
+
+      <div class="post-info">
+        <p class="post-author">By Eric Hagemann</p>
+        <div class="post-tags">
+          {{#if tags}}
+            {{tags separator=" / "}}
+          {{/if}}
+        </div>
+      </div>
+
+      {{#if image}}
+        <div class="post-img" style="background-image:url({{image}})"></div>
+        {{else}}
+        <div class="post-img" style="background-image:url(/assets/images/journey.jpg)"></div>
+      {{/if}}
+
+      {{> "share"}}
+    <div class="post-content">
+      {{content}}
+
+      <time class="post-date">Published: {{date format="MMMM DD, YYYY"}}</time> 
+
+    </div>
+    {{/post}}
+
+    <div class="post-subscribe">
+      <h3 class="text-center font-title">Subscribe</h3>
+      <p><small>Enjoy the read? Fill in your email below and I'll send you a short email when new content gets posted. No spam, no selling. Ever.</small></p>
+      <div class="email-signup"> 
+      {{> email-signup}}
+      </div>
+    </div>
+  </div>
+</div>

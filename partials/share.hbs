@@ -1,0 +1,17 @@
+    <div class="share-icons">
+      <h5 class="share-title">Share this: </h5>
+      <div class="icon-row">
+      <a class="icon fa fa-lg fa-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+          onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+          {{!-- <img src="{{asset 'images/twitter.png'}}" /> --}}
+      </a>
+      <a class="icon fa fa-lg fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+          onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+          {{!-- <img src="{{asset 'images/facebook.png'}}" /> --}}
+      </a>
+      <a class="icon fa fa-lg fa-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+         onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+          {{!-- <img src="{{asset 'images/googleplus.png'}}" /> --}}
+      </a>
+      </div>
+    </div>

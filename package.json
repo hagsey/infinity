@@ -1,0 +1,40 @@
+{
+  "name": "infinity",
+  "version": "1.0.0",
+  "description": "Big red is my own shit",
+  "main": "gulpfile.js",
+  "homepage": "",
+  "scripts": {
+    "post": "scp post.hbs root@138.197.101.61:/var/www/ghost/content/themes/infinity/.",
+    "loop": "scp partials/loop.hbs root@138.197.101.61:/var/www/ghost/content/themes/infinity/partials/.",
+    "head": "scp partials/head.hbs root@138.197.101.61:/var/www/ghost/content/themes/infinity/partials/.",
+    "footer": "scp partials/footer.hbs root@138.197.101.61:/var/www/ghost/content/themes/infinity/partials/.",
+    "header": "scp partials/header.hbs root@138.197.101.61:/var/www/ghost/content/themes/infinity/partials/.",
+    "subheader": "scp partials/subheader.hbs root@138.197.101.61:/var/www/ghost/content/themes/infinity/partials/.",
+    "graphic": "scp partials/graphic-strip.hbs root@138.197.101.61:/var/www/ghost/content/themes/infinity/partials/.",
+    "img": "chmod 755 assets/images/*",
+    "sidebar": "scp partials/sidebar.hbs root@138.197.101.61:/var/www/ghost/content/themes/infinity/partials/.",
+    "default": "scp default.hbs root@138.197.101.61:/var/www/ghost/content/themes/infinity/.",
+    "about": "scp page-about.hbs root@138.197.101.61:/var/www/ghost/content/themes/infinity/.",
+    "contact": "scp page-contact.hbs root@138.197.101.61:/var/www/ghost/content/themes/infinity/.",
+    "coaching": "scp page-online-coaching.hbs root@138.197.101.61:/var/www/ghost/content/themes/infinity/.",
+    "css": "scp assets/css/main.min.css root@138.197.101.61:/var/www/ghost/content/themes/infinity/assets/css/.",
+    "js": "scp assets/js/app.min.js root@138.197.101.61:/var/www/ghost/content/themes/infinity/assets/js/.",
+    "root": "ssh root@138.197.101.61",
+    "start": "gulp"
+  },
+  "keywords": [
+    "ghost",
+    "blog"
+  ],
+  "author": "Thomas Vaeth <thomas.vaeth@gmail.com> (http://thomasvaeth.com/)",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.1"
+  }
+}

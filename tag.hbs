@@ -1,0 +1,16 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- If we have a tag cover, display that - else blog cover - else nothing --}}
+
+<div class="blog-wrapper"> 
+  {{> "subheader"}}
+  {{> "header"}}
+    {{#tag}}
+      <h3 class="tag-page-title">Topic: {{name}}</span></h3>
+    {{/tag}}
+  <div class="blog-content"> 
+  {{> "loop"}}
+  {{> "sidebar"}}
+  </div>
+</div>

@@ -1,0 +1,171 @@
+// Fonts
+// $font-header: "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $font-body: 'Lora', Georgia, Times, serif;
+
+$font-body: "Overpass", Helvetica, Arial, sans-serif;
+$font-title: "Overpass", "Oswald", Helvetica, Arial, sans-serif;
+$font-header: "Overpass", "Oswald", Helvetica, Arial, sans-serif;
+$font-alt-header: Helvetica, Arial, sans-serif;
+
+
+// Colors
+$color-white: #fff;
+$color-light-gray: #c8c8c8;
+$color-gray: #858585;
+$color-dark-gray: #444;
+$color-charcoal: #222;
+$color-black: #000;
+
+// $color-alpha: #e74c3c;
+// $color-alpha: #f3541c;
+$color-alpha: #ee4533;
+$color-alpha-darker: #d03b2b;
+$color-beta: #252525;
+
+
+
+
+// Media queries
+$mq-xs: 30em;
+$mq-sm: 38em;
+$mq-md: 50em;
+$mq-lg: 64em;
+$mq-xl: 76.5em;
+$mq-xxl: 114em;
+
+body {
+  font-family: $font-body;
+  font-size: 0.8em;
+  line-height: 1.5;
+  font-weight: 400;
+  @media (min-width: $mq-sm) {
+    font-size: 0.9em;
+  }
+  @media (min-width: $mq-md) {
+    // font-weight: 200;
+    font-size: 1em;
+  }
+  @media (min-width: $mq-lg) {
+  }
+  @media (min-width: $mq-xl) {
+    // font-size: 1.1em;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-header;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  // font-family: $font-alt-header;
+  text-transform: uppercase;
+  font-size: 0.83em;
+}
+
+p {
+  font-family: $font-body;
+  margin-bottom: 1.5em;
+}
+p, li, .loop-post-description {
+  font-weight: 200;
+}
+a {
+  
+  font-family: $font-body;
+  color: $color-black;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-alpha;
+  }
+}
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+::selection {
+  color: $color-white;
+  background-color: $color-alpha;
+  text-shadow: none;
+}
+input:focus {outline: none;}
+
+blockquote p {
+  font-family: $font-title;
+  color: #a7a6a6;
+  font-size: 2em;
+  margin: 2em auto;
+  padding-left: 0.5em;
+  border-left: 7px solid $color-alpha;
+  width: 85%;
+  /* background: #dadada; */
+  text-transform: uppercase;
+}
+table {
+  margin: 1em auto;
+  width: 100%;
+}
+tr {
+  border-bottom: 1px solid $color-light-gray;
+}
+tr:nth-child(even) {
+  background: #f4f4f4;
+}
+th,td {
+  text-align: center;
+  padding: 6px;
+}
+th {
+  background: $color-light-gray;
+  font-family: $font-title;
+  text-transform: uppercase;
+}
+td {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
+  color: $color-dark-gray;
+}
+
+hr {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: 1px solid $color-light-gray;
+    color: $color-light-gray;
+    text-align: center;
+}
+hr:after {
+    content: "∫∫";
+    display: inline-block;
+    position: relative;
+    top: -0.8em;
+    font-size: 1em;
+    font-weight: 100;
+    padding: 0 0.25em;
+    background: white;
+}

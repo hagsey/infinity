@@ -1,0 +1,13 @@
+{{!< default}}
+{{> "header"}}
+<div class="page">
+<h1>Archive</h1>
+
+{{#get "posts" limit="all"}}
+    {{#foreach posts}}
+    <p><time>{{date format="MMMM DD, YYYY"}}</time> | <a href="{{url}}">{{title}}</a></p>
+    {{/foreach}}
+
+{{/get}}
+
+</div>

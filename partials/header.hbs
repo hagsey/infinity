@@ -1,0 +1,44 @@
+<div class="site-header">
+  <div class="site-header-primary">
+    <div class="site-header-brand">
+      <a href="/" class="logo logo--dark"><span>E</span>H</a>
+    </div>
+  </div>
+
+  <div class="site-header-menu">
+    <a class="site-header-menu__link" href="/about">About</a>
+    <a class="site-header-menu__link" href="/online-coaching">Online Coaching</a>
+    <a class="site-header-menu__link" href="/contact">Contact</a>
+    <i>|</i>
+    <div class="follow-links follow-links__small">
+      <a name="twitter" class="follow-link" href="http://www.twitter.com/ehagemann" target="blank"><i class="fa fa-lg fa-twitter"></i></a>
+      <a name="instagram" class="follow-link" href="http://www.instagram.com/erichagemann" target="blank"><i class="fa fa-lg fa-instagram"></i></a>
+      <a name="mail" class="follow-link" href="mailto:hagemann.eric@gmail.com" target="blank"><i class="fa fa-lg fa-envelope"></i></a>
+      <div class="callout">
+        Contact
+      </div>
+    </div>
+  </div>
+  <i class="hamburger fa fa-bars"></i>
+</div>
+
+<div class="mobile-menu">
+  <i class="close-menu fa fa-close fa-lg"></i>
+  <div class="mobile-menu__content">
+    <h4 class="mobile-menu__title">Pages</h4>
+    <a class="mobile-menu__link" href="/">Home</a>
+    <a class="mobile-menu__link" href="/about">About</a>
+    <a class="mobile-menu__link" href="/online-coaching">Online Coaching</a>
+    <a class="mobile-menu__link" href="/contact">Contact</a>
+    <h4 class="mobile-menu__title">Topics</h4>
+
+    {{#get "tags" limit="all" as |tags|}}
+      <div class="mobile-tags">
+      {{#foreach tags}}
+        <a class="mobile-menu__link" href="{{url}}">{{name}}</a>
+      {{/foreach}}
+      </div>
+    {{/get}}
+  </div>
+
+</div>

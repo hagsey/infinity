@@ -1,0 +1,38 @@
+<div class="main">
+  <div class="loop">
+    {{#foreach posts}}
+    <div class="loop-post">
+      <a class="post-title" href="{{url}}">{{{title}}}</a>
+      <div class="post__meta">
+          <time class="post-meta__item loop-date">{{date format="MMMM DD, YYYY"}}</time> 
+
+        {{#if tags}}
+        <div class="post-meta__item">
+          <div class="tags-list">
+          {{tags separator=", "}}
+          </div>
+        </div>
+        {{/if}}
+      </div>    
+
+      {{#if image}}
+      <div class="loop-post__img" style="background-image: url({{image}})">
+      </div>
+      {{else}}
+      <div class="loop-post__img loop-post__img--default">
+      </div>
+      {{/if}}
+
+      <div class="loop-post-description">
+      {{#if meta_description}}
+        {{meta_description}}...<a href="{{url}}">Continue</a>
+      {{else}}
+        {{excerpt words="35"}}...<a href="{{url}}">Continue</a>
+      {{/if}}
+      </div>
+    <hr>
+    </div>
+    {{/foreach}}
+    {{pagination}}
+  </div>
+</div>
