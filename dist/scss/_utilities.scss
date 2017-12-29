@@ -100,3 +100,8 @@
   font-family: $font-title;
   text-transform: uppercase;
 }
+.center-itemX {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
