@@ -19,8 +19,9 @@
     "contact": "scp page-contact.hbs root@138.197.101.61:/var/www/ghost/content/themes/infinity/.",
     "coaching": "scp page-online-coaching.hbs root@138.197.101.61:/var/www/ghost/content/themes/infinity/.",
     "css": "scp assets/css/main.min.css root@138.197.101.61:/var/www/ghost/content/themes/infinity/assets/css/.",
-    "js": "scp assets/js/app.min.js root@138.197.101.61:/var/www/ghost/content/themes/infinity/assets/js/.",
+    "js": "scp assets/js/app.min.js assets/js/bundle.js root@138.197.101.61:/var/www/ghost/content/themes/infinity/assets/js/.",
     "root": "ssh root@138.197.101.61",
+    "webpack": "./node_modules/.bin/webpack -d --watch",
     "start": "gulp"
   },
   "keywords": [
@@ -36,5 +37,14 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.0.1"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "^3.10.0"
   }
 }

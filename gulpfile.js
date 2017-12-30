@@ -33,7 +33,10 @@ gulp.task('minifyBundle', ['bundleScripts'], function() {
   .pipe(gulp.dest('./assets/js'));
 });
 
-gulp.task('build', ['sass', 'minifyBundle']);
+gulp.task('build', [
+  'sass',
+  'minifyBundle'
+  ]);
 
 gulp.task('watch', function() {
   gulp.watch('./dist/scss/**/*.scss', ['sass']);
