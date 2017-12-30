@@ -10253,7 +10253,6 @@ return jQuery;
 } );
 
 $(function() {
-
     // Hamburger toggle
   (function() {
 
@@ -10299,5 +10298,5 @@ $(function() {
       }
     });
   }());
-  
+
 });

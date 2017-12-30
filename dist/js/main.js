@@ -1,5 +1,4 @@
 $(function() {
-
     // Hamburger toggle
   (function() {
 
@@ -45,5 +44,5 @@ $(function() {
       }
     });
   }());
-  
+
 });
