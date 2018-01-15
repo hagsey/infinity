@@ -24,7 +24,7 @@ $(function() {
         $callout = $(".callout"),
         twitter_text = "@ehagemann",
         instagram_text = "@erichagemann",
-        mail_text = "hagemann.eric@gmail.com";
+        mail_text = "eric@endurostrengthcoaching.com";
 
     $link.on({
       "mouseenter": function() {
