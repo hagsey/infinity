@@ -10253,32 +10253,27 @@ return jQuery;
 } );
 
 $(function() {
-    // Hamburger toggle
+  // Hamburger toggle
   (function() {
 
     var $hamb = $(".hamburger"),
-        $close = $(".close-menu"),
-        $menu = $(".mobile-menu");
+      $menu = $(".mobile-menu");
 
-      $hamb.on("click", function() {
-        $menu.fadeIn(200);
-      
-      });
+    $hamb.on("click", function() {
+      $menu.slideToggle(200);
 
-      $close.on("click", function() {
-        $menu.fadeOut(200);
-      });
+    });
   }());
 
   // Follow link callout
   (function() {
 
-   var text,
-        $link = $(".site-header-menu a.follow-link"),
-        $callout = $(".callout"),
-        twitter_text = "@ehagemann",
-        instagram_text = "@erichagemann",
-        mail_text = "eric@endurostrengthcoaching.com";
+    var text,
+      $link = $(".site-header-menu a.follow-link"),
+      $callout = $(".callout"),
+      twitter_text = "@ehagemann",
+      instagram_text = "@erichagemann",
+      mail_text = "eric@endurostrengthcoaching.com";
 
     $link.on({
       "mouseenter": function() {
@@ -10287,7 +10282,7 @@ $(function() {
         if (name === "twitter") {
           text = twitter_text;
         } else if (name === "instagram") {
-          text = instagram_text;       
+          text = instagram_text;
         } else if (name === "mail") {
           text = mail_text;
         }
