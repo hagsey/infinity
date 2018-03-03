@@ -4,12 +4,14 @@
     <div class="loop-post">
       <a class="post-title" href="{{url}}">{{{title}}}</a>
       <div class="post__meta">
-          <time class="post-meta__item loop-date">{{date format="MMMM DD, YYYY"}}</time> 
+        <div class="post-meta__item">
+          <time class="loop-date">{{date format="MMMM DD, YYYY"}}</time> 
+        </div>
 
         {{#if tags}}
         <div class="post-meta__item">
           <div class="tags-list">
-          {{tags separator=", "}}
+          {{tags separator=""}}
           </div>
         </div>
         {{/if}}

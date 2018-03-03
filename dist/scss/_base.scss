@@ -87,8 +87,9 @@ p {
   font-family: $font-body;
   margin-bottom: 1.5em;
 }
-p, li, .loop-post-description {
+p, li, .loop-post-description, a {
   font-weight: 300;
+  font-size: 0.9em;
 }
 a {
   

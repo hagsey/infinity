@@ -295,6 +295,7 @@
 }
 .post-author {
   color: $color-black;
+  font-size: 0.8em;
 }
 .post-author,
 .post-date  {
@@ -307,17 +308,6 @@
   display: block;
   font-family: $font-body;
   font-style: italic;
-}
-.post-tags a,
-.post-tags {
-  font-size: 0.9em;
-  color: $color-gray;
-  // font-family: $font-header;
-  text-transform: capitalize;
-
-}
-.post-tags a:hover {
-  color: $color-alpha;
 }
 // Loop
 
@@ -339,11 +329,9 @@
   }
 }
 .loop-date {
-  font-family: $font-body;
   font-weight: 300;
-  color: $color-gray;
+  font-size: 0.8em;
 }
-
 
 .loop-post__img {
   width: 100%;
@@ -381,13 +369,13 @@
   display: flex;
   align-items: center;
   margin-bottom: 1em;
+
 }
 .post-meta__item {
   padding: 0 15px;
   position: relative;
   left: -15px;
   align-items: center;
-
   h5 {
     font-weight: 700;
   }
@@ -415,7 +403,6 @@
 
   display: flex;
   flex-wrap: wrap;
-  color: $color-gray;
   
   @media (min-width: $mq-md) {
     display: grid;
@@ -423,10 +410,7 @@
   }
 }
 .tags-list a {
-  font-family: $font-body;
-  font-weight: 300;
   margin: 3px;
-  font-size: 0.8em;
 
   @media (min-width: $mq-md) {
     margin: 0;
@@ -434,21 +418,24 @@
 }
 
 .post-meta__item {
+
   .tags-list {
     display: flex;
     flex-shrink: 0;
     flex-wrap: wrap;
   }
   .tags-list a {
+    font-size: 0.7em;
+    margin: 3px;
     background: none;
-    color: $color-gray;
-    padding: 0;
-    font-size: 1em;
+    color: $color-alpha;
+    padding: 1px 4px;
+    border: 1px solid $color-alpha;
     text-transform: capitalize;
-    margin-left: 3px;
   }
   .tags-list a:hover {
-    color: $color-alpha;
+    background: $color-alpha;
+    color: white;
     transform: none;
   }
 }
@@ -603,10 +590,6 @@
 
 
 }
-.sidebar-about p {
-  font-size: 0.9em;
-}
-
 .follow-link__bg-circle i {
   background: $color-light-gray;
   padding: 10px 8px;

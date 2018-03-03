@@ -8,12 +8,16 @@
     {{#post}}
       <h1 class="post-title">{{title}}</h1>
 
-      <div class="post-info">
-        <p class="post-author">By Eric Hagemann</p>
-        <div class="post-tags">
-          {{#if tags}}
-            {{tags separator=" / "}}
-          {{/if}}
+      <div class="post__meta">
+        <div class="post-meta__item">
+          <p class="post-author">By Eric Hagemann</p>
+        </div>
+        <div class="post-meta__item">
+          <div class="tags-list">
+            {{#if tags}}
+              {{tags separator=""}}
+            {{/if}}
+          </div>
         </div>
       </div>
 
